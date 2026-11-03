@@ -6,29 +6,28 @@
     <title>Mi Primera Página Web</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-image: url('prueba.jpeg'); /* Nombre de tu imagen de fondo */
-    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    color: #333333;
-    text-align: center;
-    padding: 50px;
-    
-}
+            font-family: Arial, sans-serif;
+            background-image: url('prueba.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: #333333;
+            text-align: center;
+            padding: 50px;
+        }
         h1 {
             color: #0066cc;
         }
         .tarjeta {
-            
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             display: inline-block;
+            background: white;
         }
     </style>
 </head>
-
 <body>
+
     <div class="tarjeta">
         <img src="exp.jpeg" alt="Foto de prueba" width="150">
         <h1>¡El amor de mi vida!</h1>
@@ -39,9 +38,7 @@
         <p>Has hecho clic <span id="contador">0</span> veces.</p>
     </div>
 
-
-</body>
-<script>
+    <script>
         let clicks = 0;
         const boton = document.getElementById('mi-boton');
         const contador = document.getElementById('contador');
@@ -51,5 +48,6 @@
             contador.textContent = clicks;
         });
     </script>
+
 </body>
 </html>
