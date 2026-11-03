@@ -6,17 +6,20 @@
     <title>Mi Primera Página Web</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
+    font-family: Arial, sans-serif;
+    background-image: url('prueba.jpeg'); /* Nombre de tu imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    color: #333333;
+    text-align: center;
+    padding: 50px;
+    
+}
         h1 {
             color: #0066cc;
         }
         .tarjeta {
-            background: white;
+            
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -25,13 +28,28 @@
     </style>
 </head>
 <body>
-
+<body>
     <div class="tarjeta">
-        <img src="mi-foto.jpg" alt="Mi foto de perfil" width="150">
-        <h1>¡Hola, mundo! 👋</h1>
-        <p>Esta es mi primera página web creada por mí mismo.</p>
-        <p>¡Bienvenido/a a mi rincón en internet!</p>
+        <img src="exp.jpeg" alt="Foto de prueba" width="150">
+        <h1>¡El amor de mi vida!</h1>
+        <p>boton de ver quien ama mas.</p>
+        
+        <!-- Agregamos el botón y el contador aquí -->
+        <button id="mi-boton">¡Haz clic aquí!</button>
+        <p>Has hecho clic <span id="contador">0</span> veces.</p>
     </div>
 
+
+</body>
+<script>
+        let clicks = 0;
+        const boton = document.getElementById('mi-boton');
+        const contador = document.getElementById('contador');
+
+        boton.addEventListener('click', function() {
+            clicks++;
+            contador.textContent = clicks;
+        });
+    </script>
 </body>
 </html>
